@@ -1,0 +1,8 @@
+<h2> Add a new recipe   </h2>
+
+<form [formGroup]="recipeForm" (submit)="saveRecipe()">
+  <label for="name">Name</label>
+  <input formControlName="name" id="name"/>
+
+  <button type="submit" [disabled]="!recipeForm.valid">Submit</button>
+</form>

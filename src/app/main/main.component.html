@@ -1,0 +1,11 @@
+<app-new-recipe (valueAdded)="getRecipes()"></app-new-recipe>
+
+<br>
+
+<app-random></app-random>
+
+<br>
+
+<li *ngFor="let recipe of recipes">
+  {{recipe.name}}
+</li>
