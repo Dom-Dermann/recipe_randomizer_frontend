@@ -25,4 +25,12 @@ export class MainComponent implements OnInit {
     });
   }
 
+  cookedThis(recipe) {
+    this.data.cooked(recipe._id).subscribe( (data) => {
+      console.log(data);
+    }, (err) => console.log(err), () => {
+      this.getRecipes();
+    });
+  }
+
 }

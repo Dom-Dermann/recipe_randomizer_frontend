@@ -6,6 +6,29 @@
 
 <br>
 
-<li *ngFor="let recipe of recipes">
-  {{recipe.name}}
-</li>
+<table>
+  <tr>
+    <th>Recipe name</th>
+    <th>Rating</th>
+    <th>Number of times cooked</th>
+    <th>Last cooked on</th>
+    <th>Add a cooked meal</th>
+  </tr>
+  <tr *ngFor="let recipe of recipes">
+    <td>
+      {{recipe.name}}
+    </td>
+    <td class="table-numbers">
+      {{recipe.rating}}
+    </td>
+    <td class="table-numbers">
+      {{recipe.timesCooked}}
+    </td>
+    <td>
+      {{recipe.lastCooked}}
+    </td>
+    <td>
+      <button (click)="cookedThis(recipe)"> I cooked this today</button>
+    </td>
+  </tr>
+</table>

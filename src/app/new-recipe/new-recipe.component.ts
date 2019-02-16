@@ -15,7 +15,10 @@ export class NewRecipeComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private data: DataService) {
     this.recipeForm = this.fb.group({
-      'name': ['', Validators.required]
+      'name': ['', Validators.required],
+      'rating': ['', Validators.required],
+      '#cooked': [''],
+      'lastCooked': ['']
     });
   }
 
@@ -24,7 +27,12 @@ export class NewRecipeComponent implements OnInit {
   }
 
   saveRecipe() {
-    this.data.post_recipe(this.recipeForm.value.name).subscribe( (r) => {
+    const recipe = {
+      name : this.recipeForm.value.name,
+      rating: this.recipeForm.value.rating
+    };
+
+    this.data.post_recipe(recipe).subscribe( (r) => {
       console.log(r);
     },
     (err) => console.log(err),

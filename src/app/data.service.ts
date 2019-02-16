@@ -15,14 +15,15 @@ export class DataService {
     return this.client.get(this.recipe_url);
   }
 
-  post_recipe(name) {
-    const new_recipe: Recipe = {
-      name: name
-    };
-    return this.client.post(this.recipe_url + '/recipe', new_recipe);
+  post_recipe(recipe) {
+    return this.client.post(this.recipe_url + '/recipe', recipe);
   }
 
   get_random_recipe() {
     return this.client.get(this.recipe_url + '/random');
+  }
+
+  cooked(id) {
+    return this.client.get(this.recipe_url + '/cooked/' + id);
   }
 }
