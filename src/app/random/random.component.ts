@@ -16,12 +16,12 @@ import {
   animations: [
     trigger('loaded', [
       state('open', style({
-        height: '200px',
+        height: '300px',
         opacity: 1,
         backgroundColor: 'yellow'
       })),
       state('closed', style({
-        height: '100px',
+        height: '50px',
         opacity: 0.5,
         backgroundColor: 'green'
       })),
