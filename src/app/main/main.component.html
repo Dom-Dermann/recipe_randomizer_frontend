@@ -1,12 +1,18 @@
-<app-new-recipe (valueAdded)="getRecipes()"></app-new-recipe>
+<h1> Recipe randomizer </h1>
+
+<div style="display:inline-block; margin: 0 auto; margin-bottom: 50px;">
+  <app-new-recipe (valueAdded)="getRecipes()"></app-new-recipe>
+</div>
 
 <br>
 
-<app-random></app-random>
+<div class="random-container">
+  <app-random></app-random>
+</div>
 
 <br>
 
-<table>
+<table class="rtable">
   <tr>
     <th>Recipe name</th>
     <th>Rating</th>

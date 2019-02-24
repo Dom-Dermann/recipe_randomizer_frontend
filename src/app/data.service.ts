@@ -7,7 +7,7 @@ import { Recipe } from './interface.recipe';
 })
 export class DataService {
 
-  recipe_url = 'http://localhost:3000';
+  recipe_url = 'https://recipe-randomizer.herokuapp.com';
 
   constructor(private client: HttpClient) { }
 

@@ -1,3 +1,4 @@
 <button (click)="random()"> Give me a random recipe!</button>
-
-<p> {{randomRecipe}} </p>
+<div [@loaded]="isLoading ?  'open' : 'closed'" class="load-container">
+  <p> {{randomRecipe}} </p>
+</div>
